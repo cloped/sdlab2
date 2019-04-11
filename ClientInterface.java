@@ -1,5 +1,3 @@
-package socket.client;
-
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -70,7 +68,101 @@ public class ClientInterface extends JFrame{
         // janelaEditar.addActionListener(new ActionListener() {
         //     public void actionPerformed(ActionEvent e) {
 
+        //         panelEdit.setLayout(new BoxLayout(panelEdit, // ok.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent e) {
+        //         try {
+        //             String s1 = inputNome.getText();
+        //             String s2 = inputCotacao.getText();
+        //             double cotacao = Double.valueOf(s2);
+        //             int operacao = 0;
+
+
+        //             String moeda = new ClientSocket().CriaMoedaSemClasse(cotacao,s1,operacao);
+        //             System.out.println(moeda);
+        //             String texto = moeda;
+        //             area.setText(texto);
+
+        //         } catch (NumberFormatException e1) {
+        //             e1.printStackTrace();
+        //         } catch (IOException e1) {
+        //             e1.printStackTrace();
+        //         }
+        //     }
+        // });
+        // //AQUI EU VOU FAZER O BOTAO DE EDITAR QUE VAI ABRIR UMA NOVA JANELA PRA EDITAR UMA MOEDA
+        // janelaEditar.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent e) {
+
         //         panelEdit.setLayout(new BoxLayout(panelEdit,BoxLayout.Y_AXIS));
+        //         panelEdit.add(num);
+        //         panelEdit.add(Box.createRigidArea(new Dimension(0, 20)));
+        //         panelEdit.add(inputID);
+        //         panelEdit.add(Box.createRigidArea(new Dimension(0, 20)));
+        //         panelEdit.add(newVal);
+        //         panelEdit.add(Box.createRigidArea(new Dimension(0, 20)));
+        //         panelEdit.add(inputNCotacao);
+        //         panelEdit.add(Box.createRigidArea(new Dimension(0, 20)));
+        //         panelEdit.add(editarJanelaEditar);
+        //         panelEdit.add(apagar);
+
+        //         // Display the window.
+        //         frame2.setLocation(500,500);
+        //         frame2.pack();
+        //         frame2.setVisible(true);
+        //         frame2.toFront();
+
+        //     }
+
+        // });
+        // editarJanelaEditar.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent e) {
+        //         try{
+        //             String s1 = inputID.getText();
+        //             String s2 = inputNCotacao.getText();
+        //             double cotacao = Double.valueOf(s2);
+        //             int operacao = 1;
+
+        //             String moeda = new ClientSocket().CriaMoedaSemClasse(cotacao,s1,operacao);
+        //             System.out.println(moeda);
+        //             String texto = moeda;
+        //             area.setText(texto);
+        //             System.out.println("eu editei a moeda");
+        //             frame2.setVisible(false);
+
+
+        //         }catch (NumberFormatException e1) {
+        //             e1.printStackTrace();
+        //         } catch (IOException e1) {
+        //             e1.printStackTrace();
+        //         }
+
+        //     }
+        // });
+        // apagar.addActionListener(new ActionListener() {
+        //     public void actionPerformed(ActionEvent e) {
+        //         try{
+        //             String s1 = inputID.getText();
+        //             String s2 = inputNCotacao.getText();
+        //             double cotacao = Double.valueOf(s2);
+        //             int operacao = 2;
+
+        //             String moeda = new ClientSocket().CriaMoedaSemClasse(cotacao,s1,operacao);
+        //             System.out.println(moeda);
+        //             String texto = moeda;
+        //             area.setText(texto);
+        //             System.out.println("eu apaguei a moeda");
+        //             frame2.setVisible(false);
+
+
+        //         }catch (NumberFormatException e1) {
+        //             e1.printStackTrace();
+        //         } catch (IOException e1) {
+        //             e1.printStackTrace();
+        //         }
+
+
+        //     }
+        // });BoxLayout.Y_AXIS));
         //         panelEdit.add(num);
         //         panelEdit.add(Box.createRigidArea(new Dimension(0, 20)));
         //         panelEdit.add(inputID);
