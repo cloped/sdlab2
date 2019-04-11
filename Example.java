@@ -6,5 +6,5 @@ public interface Example extends Remote {
   public String getString () throws RemoteException;
   public void initMoedas() throws RemoteException;
   public ArrayList<Moeda> getMoedas() throws RemoteException;
-  // public void adicionaMoeda (Moeda m) throws RemoteException;
+  public void adicionaMoeda (String nome, double cotacao) throws RemoteException;
 }

@@ -9,11 +9,17 @@ public class ExampleClient {
       example.setString("sucesso");
       System.out.println(example.getString());
 
-      example.initMoedas();
       ArrayList<Moeda> moedasRegistradas = example.getMoedas();
-
+      if(moedasRegistradas.size() == 0) {
+        example.initMoedas();
+      }
+      moedasRegistradas = example.getMoedas();
+      // Adicionando uma moeda aqui 
+      example.adicionaMoeda("Amauri", 99999.001);
+      moedasRegistradas = example.getMoedas(); // tem que fazer isso pq ele não dá o get do atualizado
+      
       for(int i=0; i< moedasRegistradas.size(); i++) {
-        System.out.println("moeda: " + moedasRegistradas.get(i).getNome() + "cotacao: " + moedasRegistradas.get(i).getCotacao());
+        System.out.println("moeda: " + moedasRegistradas.get(i).getNome() + " cotacao: " + moedasRegistradas.get(i).getCotacao());
       }
 
     } catch (MalformedURLException e) {

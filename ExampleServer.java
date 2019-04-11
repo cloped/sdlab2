@@ -18,14 +18,19 @@ public class ExampleServer extends UnicastRemoteObject implements Example {
   }
 
   public ArrayList<Moeda> getMoedas() throws RemoteException {
-    return moedasRegistradas;
+    return this.moedasRegistradas;
   }
 
   public void initMoedas() throws RemoteException {
     Moeda real = new Moeda("real", 2.01);
     Moeda dolar = new Moeda("dolar", 3.99);
 
-    moedasRegistradas.add(real);
-    moedasRegistradas.add(dolar);
+    this.moedasRegistradas.add(real);
+    this.moedasRegistradas.add(dolar);
+  }
+
+  public void adicionaMoeda (String nome, double cotacao) throws RemoteException {
+    Moeda novo = new Moeda(nome, cotacao);
+    this.moedasRegistradas.add(novo);
   }
 }
