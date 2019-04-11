@@ -1,4 +1,9 @@
-class Moeda {
+  
+import java.lang.reflect.Constructor;
+import java.io.Serializable;
+
+
+class Moeda implements Serializable {
   public double cotacao;
   public String nome;
   
