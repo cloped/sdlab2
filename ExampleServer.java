@@ -8,15 +8,6 @@ public class ExampleServer extends UnicastRemoteObject implements Example {
 
   public ExampleServer() throws RemoteException{};
 
-  public void setString(String s) throws RemoteException {
-    this.stringState = s;
-    System.out.println("Setando a variavel do objeto para:" + s);
-  }
-
-  public String getString() throws RemoteException {
-    return "getstring: " + this.stringState;
-  }
-
   public ArrayList<Moeda> getMoedas() throws RemoteException {
     return this.moedasRegistradas;
   }
@@ -32,5 +23,33 @@ public class ExampleServer extends UnicastRemoteObject implements Example {
   public void adicionaMoeda (String nome, double cotacao) throws RemoteException {
     Moeda novo = new Moeda(nome, cotacao);
     this.moedasRegistradas.add(novo);
+  }
+
+    public static int stringCompare(String str1, String str2) {
+        int l1 = str1.length();
+        int l2 = str2.length();
+        int lmin = Math.min(l1, l2);
+        for (int i = 0; i < lmin; i++) {
+            int str1_ch = (int)str1.charAt(i);
+            int str2_ch = (int)str2.charAt(i);
+            if (str1_ch != str2_ch) {
+                return str1_ch - str2_ch;
+            }
+        }
+        if (l1 != l2) {
+            return l1 - l2;
+        }
+        else {
+            return 0;
+        }
+    }
+
+  public void mudaCotacao (String nome, double novaCotacao) throws RemoteException {
+    Moeda novo = new Moeda(nome, novaCotacao);
+    for(int i=0; i< this.moedasRegistradas.size(); i++) {
+      if (stringCompare(moedasRegistradas.get(i).getNome(),nome) == 0) {
+        this.moedasRegistradas.set(i, novo);
+      }
+    }
   }
 }
