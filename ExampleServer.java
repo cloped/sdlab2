@@ -52,4 +52,12 @@ public class ExampleServer extends UnicastRemoteObject implements Example {
       }
     }
   }
+
+  public void removeMoeda (String nome) throws RemoteException {
+    for(int i=0; i< this.moedasRegistradas.size(); i++) {
+      if (stringCompare(moedasRegistradas.get(i).getNome(),nome) == 0) {
+        this.moedasRegistradas.remove(i);
+      }
+    }
+  }
 }

@@ -30,6 +30,10 @@ public class ExampleClient {
       example.mudaCotacao("dolar", 123.1);
       moedasRegistradas = example.getMoedas(); // tem que fazer isso pq ele não dá o get do atualizado
 
+      // removendoo real daqui
+      example.removeMoeda("real");
+      moedasRegistradas = example.getMoedas(); // tem que fazer isso pq ele não dá o get do atualizado
+
       // Mostrando as moedas
       for(int i=0; i< moedasRegistradas.size(); i++) {
         System.out.println("moeda: " + moedasRegistradas.get(i).getNome() + " cotacao: " + moedasRegistradas.get(i).getCotacao());
